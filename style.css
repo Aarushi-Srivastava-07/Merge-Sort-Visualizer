@@ -1,0 +1,240 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    background: #f5f7fa;
+    color: #2c3e50;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 0.2rem;
+}
+
+.subtitle {
+    text-align: center;
+    color: #7f8c8d;
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+
+.controls {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.control-group {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+label {
+    font-weight: 600;
+}
+
+input[type="range"] {
+    width: 180px;
+}
+
+#sizeValue {
+    min-width: 30px;
+    font-weight: 600;
+}
+
+button {
+    background: #3498db;
+    border: none;
+    color: white;
+    padding: 0.5rem 1.2rem;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+button:hover {
+    background: #2980b9;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+#randomize {
+    background: #e67e22;
+}
+#randomize:hover {
+    background: #d35400;
+}
+
+#play {
+    background: #2ecc71;
+}
+#play:hover {
+    background: #27ae60;
+}
+
+#reset {
+    background: #95a5a6;
+}
+#reset:hover {
+    background: #7f8c8d;
+}
+
+.array-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 0.5rem;
+    min-height: 200px;
+    background: white;
+    padding: 2rem 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.array-bar {
+    width: 40px;
+    background: #3498db;        
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    padding: 0.5rem 0;
+    border-radius: 6px 6px 0 0;
+    transition: all 0.2s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.array-bar.left-half {
+    background: #3498db;        
+}
+
+.array-bar.right-half {
+    background: #e67e22;        
+}
+
+.array-bar.merge-range {
+    background: #f1c40f;         
+    color: #2c3e50;
+}
+
+.array-bar.merged-range {
+    background: #f1c40f;
+    color: #2c3e50;
+}
+
+.status {
+    background: #ecf0f1;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.status p {
+    margin: 0.2rem 0;
+}
+
+#stepDescription {
+    font-weight: 600;
+    color: #16a085;
+}
+
+.explanation {
+    background: white;
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.explanation h2 {
+    color: #2c3e50;
+    margin-top: 1.5rem;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 0.3rem;
+}
+
+.explanation h2:first-of-type {
+    margin-top: 0;
+}
+
+.code-section {
+    background: white;
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-top: 2rem;
+}
+
+.code-section h2 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 0.3rem;
+}
+
+.language-tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.lang-btn {
+    background: #ecf0f1;
+    color: #2c3e50;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.lang-btn:hover {
+    background: #bdc3c7;
+}
+
+.lang-btn.active {
+    background: #3498db;
+    color: white;
+}
+
+.code-display {
+    background: #2d2d2d;
+    border-radius: 8px;
+    padding: 1rem;
+    overflow-x: auto;
+}
+
+#code-block {
+    margin: 0;
+    color: #f8f8f2;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}

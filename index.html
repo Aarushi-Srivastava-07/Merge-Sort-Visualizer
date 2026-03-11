@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merge Sort · Divide & Conquer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Merge Sort Visualization</h1>
+    <p class="subtitle">Step through the divide and conquer process</p>
+
+    <div class="controls">
+        <div class="control-group">
+            <label for="arraySize">Array size:</label>
+            <input type="range" id="arraySize" min="2" max="20" value="8">
+            <span id="sizeValue">8</span>
+        </div>
+        <div class="control-group">
+            <button id="randomize">Randomize</button>
+            <button id="step">Step</button>
+            <button id="play">Play</button>
+            <button id="reset">↺ Reset</button>
+        </div>
+    </div>
+
+    <div class="array-container" id="arrayContainer"></div>
+
+    <div class="status">
+        <p id="stepDescription">Initial array</p>
+        <p id="stepNumber">Step 0 / 0</p>
+    </div>
+
+    <div class="explanation">
+        <h2>Divide, Conquer, Merge</h2>   
+        <p><strong>Divide:</strong> Split the array into two halves until each subarray contains a single element.</p>
+        <p><strong>Conquer:</strong> Recursively sort each half (trivial for single elements).</p>
+        <p><strong>Merge:</strong> Combine two sorted halves into one sorted array by repeatedly taking the smaller element.</p>
+
+        <h2>⏱️ Time Complexity</h2>
+        <p><strong>Recurrence:</strong> T(n) = 2T(n/2) + O(n)</p>
+        <p><strong>Solution:</strong> O(n log n) — linearithmic time.</p>
+        <p><em>Each level of recursion processes all n elements, and there are log₂(n) levels.</em></p>
+    </div>
+
+    <div class="code-section">
+        <h2>Merge Sort Implementation</h2>
+        <div class="language-tabs">
+            <button class="lang-btn active" data-lang="c">C</button>
+            <button class="lang-btn" data-lang="cpp">C++</button>
+            <button class="lang-btn" data-lang="java">Java</button>
+            <button class="lang-btn" data-lang="python">Python</button>
+            <button class="lang-btn" data-lang="javascript">JavaScript</button>
+        </div>
+        <div class="code-display">
+            <pre id="code-block"></pre>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
